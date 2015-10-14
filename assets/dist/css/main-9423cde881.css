@@ -310,7 +310,7 @@ html {
 body {
   height: 100%;
   background-color: #FFC116;
-  color: #666677;
+  color: #555;
   font-family: Helvetica, 'Open Sans', Arial, serif;
   font-size: 18px;
   font-style: normal;
@@ -855,7 +855,7 @@ Styleguide components.bubble
   position: relative;
   margin-right: 1.5rem;
   border-radius: 50%;
-  border: 1px solid #666677;
+  border: 1px solid #555;
   font-weight: 400;
   line-height: 3.36rem;
   text-align: center;
@@ -938,10 +938,10 @@ Styleguide components.bubble
 .bubble.bubble--white {
   border-color: #ffffff;
   background-color: #ffffff;
-  color: #666677;
+  color: #555;
 }
 .bubble.bubble--white .icon {
-  fill: #666677;
+  fill: #555;
 }
 .bubble.bubble--whiteTransparent {
   border: none;
@@ -954,10 +954,10 @@ Styleguide components.bubble
 .bubble.bubble--yellow {
   border-color: #FFC116;
   background-color: #FFC116;
-  color: #666677;
+  color: #555;
 }
 .bubble.bubble--yellow .icon {
-  fill: #666677;
+  fill: #555;
 }
 .bubble.bubble--yellowTransparent {
   border: none;
@@ -1005,10 +1005,93 @@ Styleguide components.bubble
   top: 120%;
   left: 0;
   right: 0;
-  color: #666677;
+  color: #555;
   line-height: 1.2;
   font-size: 9px;
   font-weight: bold;
+}
+.loader {
+  width: 100%;
+  height: 200px;
+  padding: 5rem 8rem;
+}
+.loader-inner {
+  position: relative;
+  margin-top: 3rem;
+}
+.loader-inner > * {
+  position: absolute;
+  left: 45%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.sausage,
+.angrySausage {
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 50px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50px;
+  -moz-background-clip: padding;
+  border-radius: 50px;
+  background-clip: padding-box;
+  width: 55px;
+  height: 20px;
+  background: #ff6666;
+  -webkit-box-shadow: inset 2px -2px 1px 1px #cc0000;
+  -moz-box-shadow: inset 2px -2px 1px 1px #cc0000;
+  box-shadow: inset 2px -2px 1px 1px #cc0000;
+  -webkit-animation: spin 2s ease infinite;
+  -moz-animation: spin 2s ease infinite;
+  -o-animation: spin 2s ease infinite;
+  animation: spin 2s ease infinite;
+}
+.angrySausage {
+  -webkit-animation: angryspin 2s ease infinite;
+  -moz-animation: angryspin 2s ease infinite;
+  -o-animation: angryspin 2s ease infinite;
+  animation: angryspin 2s ease infinite;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes angryspin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  60% {
+    -webkit-transform: rotate(620deg);
+  }
+  100% {
+    -webkit-transform: rotate(1080deg);
+  }
+}
+@keyframes angryspin {
+  0% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(620deg);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
 }
 .header {
   width: 100%;
@@ -1021,8 +1104,6 @@ Styleguide components.bubble
 .footer {
   width: 100%;
   height: 300px;
-  position: absolute;
-  bottom: 0;
   background: #A500FF;
   -webkit-box-shadow: 0 -9px 6px -5px #510;
   -moz-box-shadow: 0 -9px 6px -5px #510;
@@ -1979,6 +2060,262 @@ padding-right:calc(1.5rem);
   }
   .lay:not(.lay--offDesktop) .lay-w90 {
     width: 90%;
+  }
+}
+/*
+Stack
+
+Markup:
+<div class="stack stack--2 style-layout-example">
+	<div>50%</div>
+	<div>50%</div>
+</div>
+<div class="stack stack--3 style-layout-example">
+	<div>33.33%</div>
+	<div>33.33%</div>
+	<div>33.33%</div>
+</div>
+<div class="stack stack--4 style-layout-example">
+	<div>25%</div>
+	<div>25%</div>
+	<div>25%</div>
+	<div>25%</div>
+</div>
+
+Weight: 3
+
+Styleguide: helpers.grid.stack
+*/
+.stack > * {
+  display: block;
+}
+.stack + .stack {
+  margin-top: 2rem;
+}
+@media only screen and (min-width : 768px) {
+  .stack.stack--2 {
+    width: 106%;
+    margin-left: -3%;
+    margin-right: -3%;
+  }
+  .stack.stack--2:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+  .stack.stack--2:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+  .stack.stack--2 > * {
+    width: 44%;
+    margin-left: 3%;
+    margin-right: 3%;
+    float: left;
+  }
+}
+@media only screen and (min-width : 992px) {
+  .stack.stack--2-desktop {
+    width: 106%;
+    margin-left: -3%;
+    margin-right: -3%;
+  }
+  .stack.stack--2-desktop:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+  .stack.stack--2-desktop:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+  .stack.stack--2-desktop > * {
+    width: 44%;
+    margin-left: 3%;
+    margin-right: 3%;
+    float: left;
+  }
+}
+.stack.stack--3 > * + * {
+  margin-top: 2rem;
+}
+@media only screen and (min-width : 768px) {
+  .stack.stack--3 {
+    width: 103%;
+    margin-left: -1.5%;
+    margin-right: -1.5%;
+  }
+  .stack.stack--3 > * {
+    margin-top: 0;
+  }
+  .stack.stack--3 > *:nth-child(1n+4) {
+    margin-top: 4rem;
+  }
+  .stack.stack--3:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+  .stack.stack--3:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+  .stack.stack--3 > * {
+    width: 30.33333333%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    float: left;
+  }
+}
+@media only screen and (min-width : 992px) {
+  .stack.stack--3 {
+    width: 106%;
+    margin-left: -3%;
+    margin-right: -3%;
+  }
+  .stack.stack--3:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+  .stack.stack--3:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+  .stack.stack--3 > * {
+    width: 27.33333333%;
+    margin-left: 3%;
+    margin-right: 3%;
+    float: left;
+  }
+}
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+  .stack.stack--3-large {
+    width: 103%;
+    margin-left: -1.5%;
+    margin-right: -1.5%;
+  }
+  .stack.stack--3-large:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+  .stack.stack--3-large:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+  .stack.stack--3-large > * {
+    width: 30.33333333%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    float: left;
+  }
+}
+@media only screen and (min-width : 992px) {
+  .stack.stack--3-large {
+    width: 106%;
+    margin-left: -3%;
+    margin-right: -3%;
+  }
+  .stack.stack--3-large:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+  .stack.stack--3-large:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+  .stack.stack--3-large > * {
+    width: 27.33333333%;
+    margin-left: 3%;
+    margin-right: 3%;
+    float: left;
+  }
+}
+.stack.stack--3-large > * {
+  margin-bottom: 4rem;
+}
+.stack.stack--4 {
+  width: 110%;
+  margin-left: -5%;
+  margin-right: -5%;
+}
+.stack.stack--4 > * + * + * {
+  margin-top: 2.5rem;
+}
+.stack.stack--4:after {
+  display: table;
+  clear: both;
+  content: '';
+}
+.stack.stack--4:after {
+  display: table;
+  clear: both;
+  content: '';
+}
+.stack.stack--4 > * {
+  width: 40%;
+  margin-left: 5%;
+  margin-right: 5%;
+  float: left;
+}
+@media only screen and (min-width : 768px) {
+  .stack.stack--4 {
+    width: 106%;
+    margin-left: -3%;
+    margin-right: -3%;
+  }
+  .stack.stack--4 > * {
+    margin-top: 0;
+  }
+  .stack.stack--4 > *:nth-child(1n+5) {
+    margin-top: 4rem;
+  }
+  .stack.stack--4:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+  .stack.stack--4:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+  .stack.stack--4 > * {
+    width: 19%;
+    margin-left: 3%;
+    margin-right: 3%;
+    float: left;
+  }
+}
+@media (max-width: 400px) {
+  .stack.stack--4 {
+    width: 104%;
+    margin-left: -2%;
+    margin-right: -2%;
+  }
+  .stack.stack--4:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+  .stack.stack--4:after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+  .stack.stack--4 > * {
+    width: 46%;
+    margin-left: 2%;
+    margin-right: 2%;
+    float: left;
   }
 }
 /*

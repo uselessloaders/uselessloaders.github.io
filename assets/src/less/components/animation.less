@@ -1,0 +1,59 @@
+.loader {
+	.size(100%, 200px);
+	padding: 5rem 8rem;
+}
+
+.loader-inner {
+	position: relative;
+	margin-top: 3rem;
+
+	> * {
+		position: absolute;
+		left: 45%;
+
+		.translateX(-50%);
+	}
+}
+
+
+.sausage, .angrySausage {
+	.size(50px);
+
+	.border-radius(50px);
+
+	.size(55px, 20px);
+
+	background: @swatchRed;
+
+	.box-shadow(inset 2px -2px 1px 1px darken(@swatchRed, 30%));
+	.animation(spin 2s ease infinite)
+}
+
+.angrySausage {
+	.animation(angryspin 2s ease infinite)
+}
+
+
+// misc
+
+@-webkit-keyframes spin {
+  0%   { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes angryspin {
+  0%   { -webkit-transform: rotate(0deg); }
+  60% { -webkit-transform: rotate(620deg); }
+  100% { -webkit-transform: rotate(1080deg); }
+}
+
+@keyframes angryspin {
+  0%   { transform: rotate(0deg); }
+  60% { transform: rotate(620deg); }
+  100% { transform: rotate(1080deg); }
+}

@@ -1,0 +1,134 @@
+/*
+Stack
+
+Markup:
+<div class="stack stack--2 style-layout-example">
+	<div>50%</div>
+	<div>50%</div>
+</div>
+<div class="stack stack--3 style-layout-example">
+	<div>33.33%</div>
+	<div>33.33%</div>
+	<div>33.33%</div>
+</div>
+<div class="stack stack--4 style-layout-example">
+	<div>25%</div>
+	<div>25%</div>
+	<div>25%</div>
+	<div>25%</div>
+</div>
+
+Weight: 3
+
+Styleguide: helpers.grid.stack
+*/
+
+.stack--spacing(@cols: 3, @gutter) {
+	@halfGutter: @gutter / 2;
+	@colWidth: (100% / @cols) - @gutter;
+
+	.clearfix();
+
+	width: 100% + @gutter;
+	margin-left: -@halfGutter;
+	margin-right: -@halfGutter;
+	
+	> * {
+		width: @colWidth;
+		margin-left: @halfGutter;
+		margin-right: @halfGutter;
+		float: left;
+
+		&:nth-last-child(-n+@{cols}) {
+			// margin-bottom: 0;
+		}
+	}
+}
+
+.stack {
+	> * {
+		display: block;
+		
+		// margin-bottom: 2rem;
+
+		&:last-child {
+			// margin-bottom: 0;
+		}
+	}
+	
+	+ .stack {
+		margin-top: 2rem;
+	}
+
+	&.stack--2 {
+		@media @tabletUp {
+			.stack--spacing(2, 6%);
+		}
+	}
+
+	&.stack--2-desktop {
+		@media @desktopUp {
+			.stack--spacing(2, 6%);
+		}
+	}
+
+	&.stack--3 {
+		> * + * {
+			margin-top: 2rem;
+		}
+
+		@media @tabletUp {
+			> * {
+				margin-top: 0;
+
+				&:nth-child(1n+4) {
+					margin-top: 4rem;
+				}
+			}
+
+			.stack--spacing(3, 3%);
+		}
+
+		@media @desktopUp {
+			.stack--spacing(3, 6%);
+		}
+
+	}
+
+	&.stack--3-large {
+		@media @tablet {
+			.stack--spacing(3, 3%);
+		}
+
+		@media @desktopUp {
+			.stack--spacing(3, 6%);
+		}
+
+		> * {
+			margin-bottom: 4rem;
+		}
+	}
+
+	&.stack--4 {
+		> * + * + * {
+			margin-top: 2.5rem;
+		}
+		.stack--spacing(2, 10%);
+
+		@media @tabletUp {
+			> * {
+				margin-top: 0;
+
+				&:nth-child(1n+5) {
+					margin-top: 4rem;
+				}
+			}
+
+			.stack--spacing(4, 6%);
+		}
+
+		@media (max-width: 400px) {
+			.stack--spacing(2, 4%);
+		}
+	}
+}
