@@ -1,0 +1,128 @@
+/*
+Headings
+
+Headings & stuff
+
+Weight: -9
+
+Styleguide: components.heading
+ */
+
+/*
+Colors
+
+See chapter <a href="section-helpers.html#ref-helpers-type.swatch">5.1.2 Swatches</a> for color uses.
+
+Styleguide: components.heading.colors
+ */
+
+/*
+Sizes
+
+.heading--xs - Extra small heading
+.heading--s  - Small heading
+.heading--m  - Medium heading
+.heading--l  - Large heading
+.heading--xxl - Extra large heading
+
+Markup:
+<p class="heading {{modifier_class}}">Heading</p>
+
+Styleguide: components.heading.sizes
+ */
+
+.heading {
+	display: block;
+
+	font-weight: 700;
+	text-transform: uppercase;
+	-webkit-font-smoothing: auto;
+	color: @swatchBlack;
+
+	&:last-child &:not(.heading--splash) {
+		margin-bottom: 0;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	// Variations
+
+	&.heading--collapsed {
+		margin-bottom: 0;
+	}
+
+	// Sizes
+
+	&.heading--xxs {
+		font-size: 1.1rem;
+		line-height: 1.1em;
+	}
+
+	&.heading--xs {
+		font-size: 1.4rem;
+		line-height: 1.4em;
+		font-weight: 200;
+	}
+
+	&.heading--s  {
+		font-size: 1.8rem;
+		line-height: 1.4em;
+		font-weight: 200;
+	}
+
+	&.heading--m  {
+		font-size: 2.0rem;
+		line-height: 1.3em;
+
+		@media @tabletUp {
+			font-size: 2.6rem;
+			line-height: 1.2em;
+		}
+	}
+
+	&.heading--l  {
+		font-size: 2.2rem;
+		line-height: 1.3em;
+		font-weight: 200;
+
+		@media @tabletUp {
+			font-size: 3.6rem;
+			line-height: 1.2em;
+		}
+	}
+
+	&.heading--xl {
+		font-size: 2.4rem;
+		line-height: 1.3em;
+
+		@media @tabletUp {
+			font-size: 3.0rem;
+			line-height: 1.1em;
+		}
+
+		@media @desktopUp {
+			font-size: 4.0rem;
+			line-height: 1.1em;
+		}
+	}
+
+	&.heading--xxl {
+		font-size: 4rem;
+		line-height: 1.3em;
+		text-transform: none;
+		margin: 0 0 3rem;
+
+		@media @tabletUp {
+			font-size: 7.0rem;
+			line-height: 1.1em;
+		}
+	}
+}
+

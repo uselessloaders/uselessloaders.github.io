@@ -1,0 +1,201 @@
+/*
+Bubble
+
+.bubble 
+
+Markup:
+<div class="bubble bubble--l {{modifier_class}}">
+	<svg viewBox="0 0 121.9 99.8" class="icon icon--m"><use xlink:href="../svg/sprite/main.svg#service-twitter"></use></svg>
+</div>
+
+Styleguide components.bubble
+ */
+
+.bubbles {
+	margin: 0 -.1rem -.6rem;
+
+	> * {
+		margin: 0 .1rem .6rem;
+	}
+
+	&.bubbles--primary {
+		margin: 0 -.5rem -1rem;
+
+		> * {
+			margin: 0 .5rem 1rem;
+		}
+	}
+}
+
+.bubble {
+	display: inline-block;
+	height: 3.6rem;
+	width: 3.6rem;
+	position: relative;
+	margin-right: 1.5rem;
+
+	border-radius: 50%;
+	border: 1px solid @swatchFont;
+	
+	font-weight: 400;
+	line-height: 3.36rem;
+	text-align: center;
+
+	&, > * {
+		vertical-align: middle;
+	}
+
+	> .icon, .bubble--inner {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+
+
+		.translate(-50%, -50%);
+	}
+
+	
+	// Variations
+
+	&.bubble--primary {
+		height: 5.5rem;
+		width: 5.5rem;
+	}
+
+	&.bubbleWithLabel {
+		margin-bottom: 4rem;
+	}
+
+
+	/*
+	Sizes bubble
+
+	.bubble
+
+	Markup:
+	<div class="bubble bubble--xs {{modifier_class}}">
+		<span class="bubble--inner">1</span>
+	</div>
+	<div class="bubble bubble--m {{modifier_class}}">
+		<svg viewBox="0 0 121.9 99.8" class="icon icon--s"><use xlink:href="../svg/sprite/main.svg#service-twitter"></use></svg>
+	</div>
+	<div class="bubble bubble--l {{modifier_class}}">
+		<svg viewBox="0 0 121.9 99.8" class="icon icon--m"><use xlink:href="../svg/sprite/main.svg#service-twitter"></use></svg>
+	</div>
+
+	weight: -9
+
+	Styleguide components.bubble.sizes
+	 */
+
+	&.bubble--xs {
+		height: 2.5rem;
+		width: 2.5rem;
+	}
+
+	&.bubble--s {
+		height: 3.6rem;
+		width: 3.6rem;
+	}
+
+	&.bubble--m {
+		height: 5rem;
+		width: 5rem;
+	}
+
+	&.bubble--l {
+		height: 7.7rem;
+		width: 7.7rem;
+	}
+
+
+	/*
+	Colors bubble
+
+	.bubble--white  - White bubble
+	.bubble--whiteTransparent - White transparent bubble
+	.bubble--yellow - Yellow bubble
+	.bubble--yellowTransparent - Yellow transparent bubble
+	.bubble--black - Black bubble
+	.bubble--blackTransparent - Black transparent bubble
+
+	Markup:
+	<div class="bubble bubble--l {{modifier_class}}">
+		<svg viewBox="0 0 121.9 99.8" class="icon icon--m"><use xlink:href="../svg/sprite/main.svg#service-twitter"></use></svg>
+	</div>
+
+	Styleguide components.bubble.colors
+	 */
+
+	.colorize(@bg, @color: #fff, @borderColor: @bg, @transparentColor: #fff) {
+		border-color: @borderColor;
+
+		background-color: @bg;
+
+		color: @color;
+
+		.icon {
+			fill: @color;
+		}
+
+		&Transparent {
+			border: none;
+
+			background-color: fade(@bg, 50%);
+
+			color: @transparentColor;
+
+			svg {
+				fill: @transparentColor;
+			}
+		}
+	}
+
+	&.bubble--white {
+		.colorize(#ffffff, @swatchFont);
+	}
+
+	&.bubble--yellow {
+		.colorize(@swatchYellow, @swatchFont);
+	}
+
+	&.bubble--black {
+		.colorize(#000, #ffffff);
+	}
+}
+
+.bubble--inner {
+	width: 100%;
+	font-size: 100%;
+	font-weight: 600;
+
+	// Sizes
+
+	.bubble--xs & {
+		font-size: .9rem;
+	}
+
+	.bubble--s & {
+		font-size: .9rem;
+	}
+
+	.bubble--m & {
+		font-size: .9rem;
+	}
+
+	.bubble--l & {
+		font-size: .9rem;
+	}
+}
+
+.bubble--label {
+	position: absolute;
+	top: 120%;
+	left: 0;
+	right: 0;
+
+	color: @swatchFont;
+	line-height: 1.2;
+	font-size: 9px;
+	font-weight: bold;
+}

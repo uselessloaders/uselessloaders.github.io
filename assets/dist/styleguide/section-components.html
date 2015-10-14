@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]>            <html class="no_js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IEMobile 7]>          <html class="no_js iem7" lang="en"> <![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>  <html class="no_js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>                <html class="no_js lt-ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no_js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="/dist/css/main.css">
+
+
+	<title>Styleguide</title>
+</head>
+<body id="style">
+
+<header id="style-header">
+	<div class="style-header-brand">
+		<img src="public/logo.svg">
+	</div>
+	<nav class="style-header-nav">
+		<a href="./">Styleguide</a>
+
+			<a href="section-lib.html">External libraries</a>
+			<a href="section-base.html">Base</a>
+			<a href="section-components.html">Components</a>
+			<a href="section-helpers.html">Helpers</a>
+	</nav>
+</header>
+
+<nav id="style-nav">
+
+					<a class="style-nav-heading" href="section-components.html#ref-components-heading">
+						Headings
+					</a>
+
+
+					<a class="hidden" href="section-components.html#ref-components-heading.colors">
+						Colors
+					</a>
+
+					<a class="hidden" href="section-components.html#ref-components-heading.sizes">
+						Sizes
+					</a>
+					<a class="style-nav-heading" href="section-components.html#ref-components-box">
+						Box
+					</a>
+
+
+					<a class="hidden" href="section-components.html#ref-components-box.colors">
+						Colors
+					</a>
+
+					<a class="hidden" href="section-components.html#ref-components-box.sizes">
+						Sizes
+					</a>
+					<a class="style-nav-heading" href="section-components.html#ref-components-bubble">
+						Bubble
+					</a>
+
+
+					<a class="hidden" href="section-components.html#ref-components-bubble.sizes">
+						Sizes bubble
+					</a>
+
+					<a class="hidden" href="section-components.html#ref-components-bubble.colors">
+						Colors bubble
+					</a>
+					<a class="style-nav-heading" href="section-components.html#ref-components-button">
+						Buttons
+					</a>
+
+
+					<a class="hidden" href="section-components.html#ref-components-button.primary">
+						Primary buttons
+					</a>
+
+					<a class="hidden" href="section-components.html#ref-components-button.secondary">
+						Secondary buttons
+					</a>
+</nav>
+
+<div id="style-main">
+
+		<div id="ref-components" class="style-section style-section-depth-1">
+
+			<div class="style-content">
+				<h1>
+					<a class="noLink" href="#ref-components">
+						<span class="is-highlighted">3</span>
+						Components
+						<small class="is-disabled">#</small>
+					</a>
+				</h1>
+
+
+			</div>
+
+
+		</div>
+		<div id="ref-components-heading" class="style-section style-section-depth-2">
+
+			<div class="style-content">
+				<h2>
+					<a class="noLink" href="#ref-components-heading">
+						<span class="is-highlighted">3.1</span>
+						Headings
+						<small class="is-disabled">#</small>
+					</a>
+				</h2>
+
+
+					<div class="style-description">
+						<p>Headings &amp; stuff</p>
+
+					</div>
+			</div>
+
+
+		</div>
+		<div id="ref-components-heading.colors" class="style-section style-section-depth-3">
+
+			<div class="style-content">
+				<h3>
+					<a class="noLink" href="#ref-components-heading.colors">
+						<span class="is-highlighted">3.1.1</span>
+						Colors
+						<small class="is-disabled">#</small>
+					</a>
+				</h3>
+
+
+					<div class="style-description">
+						<p>See chapter <a href="section-helpers.html#ref-helpers-type.swatch">5.1.2 Swatches</a> for color uses.</p>
+
+					</div>
+			</div>
+
+
+		</div>
+		<div id="ref-components-heading.sizes" class="style-section style-section-depth-3">
+
+			<div class="style-content">
+				<h3>
+					<a class="noLink" href="#ref-components-heading.sizes">
+						<span class="is-highlighted">3.1.2</span>
+						Sizes
+						<small class="is-disabled">#</small>
+					</a>
+				</h3>
+
+
+			</div>
+
+				<div class="style-modifiers">
+					<div class="style-modifiers-heading">Examples</div>
+						<div class="style-modifier-name">Default styling</div>
+					<div class="style-modifier-example"><p class="heading [modifier class]">Heading</p></div>
+						<div class="style-modifier-name">.heading--xs - Extra small heading</div>
+						<div class="style-modifier-example"><p class="heading heading--xs">Heading</p></div>
+						<div class="style-modifier-name">.heading--s - Small heading</div>
+						<div class="style-modifier-example"><p class="heading heading--s">Heading</p></div>
+						<div class="style-modifier-name">.heading--m - Medium heading</div>
+						<div class="style-modifier-example"><p class="heading heading--m">Heading</p></div>
+						<div class="style-modifier-name">.heading--l - Large heading</div>
+						<div class="style-modifier-example"><p class="heading heading--l">Heading</p></div>
+						<div class="style-modifier-name">.heading--xxl - Extra large heading</div>
+						<div class="style-modifier-example"><p class="heading heading--xxl">Heading</p></div>
+				</div>
+
+				<div class="style-markup">
+					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p class=&quot;heading [modifier class]&quot;&gt;Heading&lt;/p&gt;</code></pre>
+				</div>
+
+		</div>
+		<div id="ref-components-box" class="style-section style-section-depth-2">
+
+			<div class="style-content">
+				<h2>
+					<a class="noLink" href="#ref-components-box">
+						<span class="is-highlighted">3.2</span>
+						Box
+						<small class="is-disabled">#</small>
+					</a>
+				</h2>
+
+
+					<div class="style-description">
+						<p>Generic content block</p>
+
+					</div>
+			</div>
+
+
+		</div>
+		<div id="ref-components-box.colors" class="style-section style-section-depth-3">
+
+			<div class="style-content">
+				<h3>
+					<a class="noLink" href="#ref-components-box.colors">
+						<span class="is-highlighted">3.2.1</span>
+						Colors
+						<small class="is-disabled">#</small>
+					</a>
+				</h3>
+
+
+			</div>
+
+				<div class="style-modifiers">
+					<div class="style-modifiers-heading">Examples</div>
+						<div class="style-modifier-name">Default styling</div>
+					<div class="style-modifier-example"><div class="box [modifier class]">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+</div></div>
+						<div class="style-modifier-name">.box--white - White box</div>
+						<div class="style-modifier-example"><div class="box box--white">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+</div></div>
+						<div class="style-modifier-name">.box--yellow - Yellow box</div>
+						<div class="style-modifier-example"><div class="box box--yellow">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+</div></div>
+						<div class="style-modifier-name">.box--gray - Gray box</div>
+						<div class="style-modifier-example"><div class="box box--gray">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+</div></div>
+				</div>
+
+				<div class="style-markup">
+					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;box [modifier class]&quot;&gt;
+	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+
+		</div>
+		<div id="ref-components-box.sizes" class="style-section style-section-depth-3">
+
+			<div class="style-content">
+				<h3>
+					<a class="noLink" href="#ref-components-box.sizes">
+						<span class="is-highlighted">3.2.2</span>
+						Sizes
+						<small class="is-disabled">#</small>
+					</a>
+				</h3>
+
+
+			</div>
+
+				<div class="style-modifiers">
+					<div class="style-modifiers-heading">Examples</div>
+						<div class="style-modifier-name">Default styling</div>
+					<div class="style-modifier-example"><div class="box box--yellow [modifier class]">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+</div></div>
+						<div class="style-modifier-name">.box--xxs - Padding 1rem</div>
+						<div class="style-modifier-example"><div class="box box--yellow box--xxs">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+</div></div>
+						<div class="style-modifier-name">.box--xs - Padding 2rem</div>
+						<div class="style-modifier-example"><div class="box box--yellow box--xs">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+</div></div>
+						<div class="style-modifier-name">.box--s - Padding 3rem</div>
+						<div class="style-modifier-example"><div class="box box--yellow box--s">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+</div></div>
+						<div class="style-modifier-name">.box--m - Padding 4rem</div>
+						<div class="style-modifier-example"><div class="box box--yellow box--m">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+</div></div>
+						<div class="style-modifier-name">.box--l - Padding 5rem</div>
+						<div class="style-modifier-example"><div class="box box--yellow box--l">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+</div></div>
+						<div class="style-modifier-name">.box--xl - Padding 6rem</div>
+						<div class="style-modifier-example"><div class="box box--yellow box--xl">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+</div></div>
+						<div class="style-modifier-name">.box--xxl - Padding 7rem</div>
+						<div class="style-modifier-example"><div class="box box--yellow box--xxl">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+</div></div>
+				</div>
+
+				<div class="style-markup">
+					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;box box--yellow [modifier class]&quot;&gt;
+	&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+
+		</div>
+		<div id="ref-components-bubble" class="style-section style-section-depth-2">
+
+			<div class="style-content">
+				<h2>
+					<a class="noLink" href="#ref-components-bubble">
+						<span class="is-highlighted">3.3</span>
+						Bubble
+						<small class="is-disabled">#</small>
+					</a>
+				</h2>
+
+
+					<div class="style-description">
+						<p>.bubble</p>
+
+					</div>
+			</div>
+
+				<div class="style-modifiers">
+					<div class="style-modifiers-heading">Example</div>
+					<div class="style-modifier-example"><div class="bubble bubble--l [modifier class]">
+	<svg viewBox="0 0 121.9 99.8" class="icon icon--m"><use xlink:href="../svg/sprite/main.svg#service-twitter"></use></svg>
+</div></div>
+				</div>
+
+				<div class="style-markup">
+					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;bubble bubble--l [modifier class]&quot;&gt;
+	&lt;svg viewBox=&quot;0 0 121.9 99.8&quot; class=&quot;icon icon--m&quot;&gt;&lt;use xlink:href=&quot;../svg/sprite/main.svg#service-twitter&quot;&gt;&lt;/use&gt;&lt;/svg&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+
+		</div>
+		<div id="ref-components-bubble.sizes" class="style-section style-section-depth-3">
+
+			<div class="style-content">
+				<h3>
+					<a class="noLink" href="#ref-components-bubble.sizes">
+						<span class="is-highlighted">3.3.1</span>
+						Sizes bubble
+						<small class="is-disabled">#</small>
+					</a>
+				</h3>
+
+
+					<div class="style-description">
+						<p>.bubble</p>
+
+					</div>
+			</div>
+
+				<div class="style-modifiers">
+					<div class="style-modifiers-heading">Example</div>
+					<div class="style-modifier-example"><div class="bubble bubble--xs [modifier class]">
+	<span class="bubble--inner">1</span>
+</div>
+<div class="bubble bubble--m [modifier class]">
+	<svg viewBox="0 0 121.9 99.8" class="icon icon--s"><use xlink:href="../svg/sprite/main.svg#service-twitter"></use></svg>
+</div>
+<div class="bubble bubble--l [modifier class]">
+	<svg viewBox="0 0 121.9 99.8" class="icon icon--m"><use xlink:href="../svg/sprite/main.svg#service-twitter"></use></svg>
+</div></div>
+				</div>
+
+				<div class="style-markup">
+					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;bubble bubble--xs [modifier class]&quot;&gt;
+	&lt;span class=&quot;bubble--inner&quot;&gt;1&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;bubble bubble--m [modifier class]&quot;&gt;
+	&lt;svg viewBox=&quot;0 0 121.9 99.8&quot; class=&quot;icon icon--s&quot;&gt;&lt;use xlink:href=&quot;../svg/sprite/main.svg#service-twitter&quot;&gt;&lt;/use&gt;&lt;/svg&gt;
+&lt;/div&gt;
+&lt;div class=&quot;bubble bubble--l [modifier class]&quot;&gt;
+	&lt;svg viewBox=&quot;0 0 121.9 99.8&quot; class=&quot;icon icon--m&quot;&gt;&lt;use xlink:href=&quot;../svg/sprite/main.svg#service-twitter&quot;&gt;&lt;/use&gt;&lt;/svg&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+
+		</div>
+		<div id="ref-components-bubble.colors" class="style-section style-section-depth-3">
+
+			<div class="style-content">
+				<h3>
+					<a class="noLink" href="#ref-components-bubble.colors">
+						<span class="is-highlighted">3.3.2</span>
+						Colors bubble
+						<small class="is-disabled">#</small>
+					</a>
+				</h3>
+
+
+			</div>
+
+				<div class="style-modifiers">
+					<div class="style-modifiers-heading">Examples</div>
+						<div class="style-modifier-name">Default styling</div>
+					<div class="style-modifier-example"><div class="bubble bubble--l [modifier class]">
+	<svg viewBox="0 0 121.9 99.8" class="icon icon--m"><use xlink:href="../svg/sprite/main.svg#service-twitter"></use></svg>
+</div></div>
+						<div class="style-modifier-name">.bubble--white - White bubble</div>
+						<div class="style-modifier-example"><div class="bubble bubble--l bubble--white">
+	<svg viewBox="0 0 121.9 99.8" class="icon icon--m"><use xlink:href="../svg/sprite/main.svg#service-twitter"></use></svg>
+</div></div>
+						<div class="style-modifier-name">.bubble--whiteTransparent - White transparent bubble</div>
+						<div class="style-modifier-example"><div class="bubble bubble--l bubble--whiteTransparent">
+	<svg viewBox="0 0 121.9 99.8" class="icon icon--m"><use xlink:href="../svg/sprite/main.svg#service-twitter"></use></svg>
+</div></div>
+						<div class="style-modifier-name">.bubble--yellow - Yellow bubble</div>
+						<div class="style-modifier-example"><div class="bubble bubble--l bubble--yellow">
+	<svg viewBox="0 0 121.9 99.8" class="icon icon--m"><use xlink:href="../svg/sprite/main.svg#service-twitter"></use></svg>
+</div></div>
+						<div class="style-modifier-name">.bubble--yellowTransparent - Yellow transparent bubble</div>
+						<div class="style-modifier-example"><div class="bubble bubble--l bubble--yellowTransparent">
+	<svg viewBox="0 0 121.9 99.8" class="icon icon--m"><use xlink:href="../svg/sprite/main.svg#service-twitter"></use></svg>
+</div></div>
+						<div class="style-modifier-name">.bubble--black - Black bubble</div>
+						<div class="style-modifier-example"><div class="bubble bubble--l bubble--black">
+	<svg viewBox="0 0 121.9 99.8" class="icon icon--m"><use xlink:href="../svg/sprite/main.svg#service-twitter"></use></svg>
+</div></div>
+						<div class="style-modifier-name">.bubble--blackTransparent - Black transparent bubble</div>
+						<div class="style-modifier-example"><div class="bubble bubble--l bubble--blackTransparent">
+	<svg viewBox="0 0 121.9 99.8" class="icon icon--m"><use xlink:href="../svg/sprite/main.svg#service-twitter"></use></svg>
+</div></div>
+				</div>
+
+				<div class="style-markup">
+					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;bubble bubble--l [modifier class]&quot;&gt;
+	&lt;svg viewBox=&quot;0 0 121.9 99.8&quot; class=&quot;icon icon--m&quot;&gt;&lt;use xlink:href=&quot;../svg/sprite/main.svg#service-twitter&quot;&gt;&lt;/use&gt;&lt;/svg&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+
+		</div>
+		<div id="ref-components-button" class="style-section style-section-depth-2">
+
+			<div class="style-content">
+				<h2>
+					<a class="noLink" href="#ref-components-button">
+						<span class="is-highlighted">3.4</span>
+						Buttons
+						<small class="is-disabled">#</small>
+					</a>
+				</h2>
+
+
+			</div>
+
+				<div class="style-modifiers">
+					<div class="style-modifiers-heading">Examples</div>
+						<div class="style-modifier-name">Default styling</div>
+					<div class="style-modifier-example"><button class="btn [modifier class]">Click me</button>
+<button class="btn [modifier class]" disabled>Disabled</button></div>
+						<div class="style-modifier-name">.btn--red - Red button</div>
+						<div class="style-modifier-example"><button class="btn btn--red">Click me</button>
+<button class="btn btn--red" disabled>Disabled</button></div>
+						<div class="style-modifier-name">.btn--blue - Blue button</div>
+						<div class="style-modifier-example"><button class="btn btn--blue">Click me</button>
+<button class="btn btn--blue" disabled>Disabled</button></div>
+				</div>
+
+				<div class="style-markup">
+					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class=&quot;btn [modifier class]&quot;&gt;Click me&lt;/button&gt;
+&lt;button class=&quot;btn [modifier class]&quot; disabled&gt;Disabled&lt;/button&gt;</code></pre>
+				</div>
+
+		</div>
+		<div id="ref-components-button.primary" class="style-section style-section-depth-3">
+
+			<div class="style-content">
+				<h3>
+					<a class="noLink" href="#ref-components-button.primary">
+						<span class="is-highlighted">3.4.1</span>
+						Primary buttons
+						<small class="is-disabled">#</small>
+					</a>
+				</h3>
+
+
+			</div>
+
+				<div class="style-modifiers">
+					<div class="style-modifiers-heading">Examples</div>
+						<div class="style-modifier-name">Default styling</div>
+					<div class="style-modifier-example"><button class="btn btn--primary [modifier class]">Click me</button>
+<button class="btn btn--primary [modifier class]" disabled>Disabled</button></div>
+						<div class="style-modifier-name">.btn--red - Red button</div>
+						<div class="style-modifier-example"><button class="btn btn--primary btn--red">Click me</button>
+<button class="btn btn--primary btn--red" disabled>Disabled</button></div>
+						<div class="style-modifier-name">.btn--blue - Blue button</div>
+						<div class="style-modifier-example"><button class="btn btn--primary btn--blue">Click me</button>
+<button class="btn btn--primary btn--blue" disabled>Disabled</button></div>
+				</div>
+
+				<div class="style-markup">
+					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class=&quot;btn btn--primary [modifier class]&quot;&gt;Click me&lt;/button&gt;
+&lt;button class=&quot;btn btn--primary [modifier class]&quot; disabled&gt;Disabled&lt;/button&gt;</code></pre>
+				</div>
+
+		</div>
+		<div id="ref-components-button.secondary" class="style-section style-section-depth-3">
+
+			<div class="style-content">
+				<h3>
+					<a class="noLink" href="#ref-components-button.secondary">
+						<span class="is-highlighted">3.4.2</span>
+						Secondary buttons
+						<small class="is-disabled">#</small>
+					</a>
+				</h3>
+
+
+			</div>
+
+				<div class="style-modifiers">
+					<div class="style-modifiers-heading">Examples</div>
+						<div class="style-modifier-name">Default styling</div>
+					<div class="style-modifier-example"><button class="btn btn--secondary [modifier class]">Click me</button>
+<button class="btn btn--secondary [modifier class]" disabled>Disabled</button></div>
+						<div class="style-modifier-name">.btn--red - Red button</div>
+						<div class="style-modifier-example"><button class="btn btn--secondary btn--red">Click me</button>
+<button class="btn btn--secondary btn--red" disabled>Disabled</button></div>
+						<div class="style-modifier-name">.btn--blue - Blue button</div>
+						<div class="style-modifier-example"><button class="btn btn--secondary btn--blue">Click me</button>
+<button class="btn btn--secondary btn--blue" disabled>Disabled</button></div>
+				</div>
+
+				<div class="style-markup">
+					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;button class=&quot;btn btn--secondary [modifier class]&quot;&gt;Click me&lt;/button&gt;
+&lt;button class=&quot;btn btn--secondary [modifier class]&quot; disabled&gt;Disabled&lt;/button&gt;</code></pre>
+				</div>
+
+		</div>
+</div>
+
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/selectize/dist/js/standalone/selectize.min.js"></script>
+<script src="/dist/js/main.js"></script>
+<script src="public/prettify.js"></script>
+<script src="public/main.js"></script>
+<script>
+	prettyPrint();
+</script>
+
+
+</body>
+</html>

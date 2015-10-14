@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]>            <html class="no_js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IEMobile 7]>          <html class="no_js iem7" lang="en"> <![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>  <html class="no_js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>                <html class="no_js lt-ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no_js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	{{{styles}}}
+
+	<title>Styleguide</title>
+</head>
+<body id="style">
+
+<header id="style-header">
+	<div class="style-header-brand">
+		<img src="public/logo.svg">
+	</div>
+	<nav class="style-header-nav">
+		<a href="./">Styleguide</a>
+
+		{{#eachRoot}}
+			<a href="section-{{referenceURI}}.html">{{header}}</a>
+		{{/eachRoot}}
+	</nav>
+</header>
+
+<nav id="style-nav">
+	{{#eachRoot}}
+		{{#ifReference ../rootName}}
+			{{#eachSection reference}}
+				{{#ifDepth 2}}
+					<a class="style-nav-heading" href="section-{{../../referenceURI}}.html#ref-{{referenceURI}}">
+						{{header}}
+					</a>
+				{{/ifDepth}}
+
+				{{#ifDepth 3}}
+					<a class="hidden" href="section-{{../../referenceURI}}.html#ref-{{referenceURI}}">
+						{{header}}
+					</a>
+				{{/ifDepth}}
+			{{/eachSection}}
+		{{/ifReference}}
+	{{/eachRoot}}
+</nav>
+
+<div id="style-main">
+	{{#if homepage}}
+		{{{homepage}}}
+	{{else}}
+
+	{{#eachSection rootName}}
+		<div id="ref-{{referenceURI}}" class="style-section style-section-depth-{{depth}}">
+
+			<div class="style-content">
+				<h{{depth}}>
+					<a class="noLink" href="#ref-{{referenceURI}}">
+						<span class="is-highlighted">{{#ifNumeric reference}}{{reference}}{{else}}{{autoincrement}}{{/ifNumeric}}</span>
+						{{header}}
+						<small class="is-disabled">#</small>
+					</a>
+				</h{{depth}}>
+
+				{{#if parameters}}
+					<div class="style-parameters layout layout-rows">
+					{{#eachParameter}}
+						<div class="style-parameters-item">
+							<code class="style-parameters-name">{{name}}</code>
+							<span class="style-parameters-desc">{{{description}}}</span>
+						</div>
+					{{/eachParameter}}
+					</div>
+				{{/if}}
+
+				{{#if description}}
+					<div class="style-description">
+						{{{description}}}
+					</div>
+				{{/if}}
+			</div>
+
+			{{#if markup}}
+				<div class="style-modifiers">
+					<div class="style-modifiers-heading">Example{{#if modifiers}}s{{/if}}</div>
+					{{#if modifiers}}
+						<div class="style-modifier-name">Default styling</div>
+					{{/if}}
+					<div class="style-modifier-example">{{{markup}}}</div>
+					{{#eachModifier}}
+						<div class="style-modifier-name">{{name}} - {{{description}}}</div>
+						<div class="style-modifier-example">{{{markup}}}</div>
+					{{/eachModifier}}
+				</div>
+
+				<div class="style-markup">
+					<pre class="prettyprint linenums lang-html"><code data-language="html">{{markup}}</code></pre>
+				</div>
+			{{/if}}
+
+		</div>
+	{{/eachSection}}
+{{/if}}
+</div>
+
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/selectize/dist/js/standalone/selectize.min.js"></script>
+<script src="/dist/js/main.js"></script>
+<script src="public/prettify.js"></script>
+<script src="public/main.js"></script>
+<script>
+	prettyPrint();
+</script>
+{{{scripts}}}
+
+</body>
+</html>

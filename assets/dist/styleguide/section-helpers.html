@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]>            <html class="no_js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IEMobile 7]>          <html class="no_js iem7" lang="en"> <![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>  <html class="no_js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>                <html class="no_js lt-ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no_js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="/dist/css/main.css">
+
+
+	<title>Styleguide</title>
+</head>
+<body id="style">
+
+<header id="style-header">
+	<div class="style-header-brand">
+		<img src="public/logo.svg">
+	</div>
+	<nav class="style-header-nav">
+		<a href="./">Styleguide</a>
+
+			<a href="section-lib.html">External libraries</a>
+			<a href="section-base.html">Base</a>
+			<a href="section-components.html">Components</a>
+			<a href="section-helpers.html">Helpers</a>
+	</nav>
+</header>
+
+<nav id="style-nav">
+
+					<a class="style-nav-heading" href="section-helpers.html#ref-helpers-grid">
+						Grid Utilities
+					</a>
+
+
+					<a class="hidden" href="section-helpers.html#ref-helpers-grid.contain">
+						Contain
+					</a>
+
+					<a class="hidden" href="section-helpers.html#ref-helpers-grid.lay">
+						Layout
+					</a>
+
+
+
+					<a class="style-nav-heading" href="section-helpers.html#ref-helpers-type">
+						Typography
+					</a>
+
+
+					<a class="hidden" href="section-helpers.html#ref-helpers-type.size">
+						Font Sizes
+					</a>
+
+					<a class="hidden" href="section-helpers.html#ref-helpers-type.weight">
+						Weights
+					</a>
+
+					<a class="hidden" href="section-helpers.html#ref-helpers-type.swatch">
+						Swatches
+					</a>
+
+					<a class="hidden" href="section-helpers.html#ref-helpers-type.alpha">
+						Alpha
+					</a>
+
+					<a class="hidden" href="section-helpers.html#ref-helpers-type.disable">
+						Disablers
+					</a>
+
+					<a class="hidden" href="section-helpers.html#ref-helpers-type.misc">
+						Misc
+					</a>
+					<a class="style-nav-heading" href="section-helpers.html#ref-helpers-offs">
+						Responsive off&#x27;s
+					</a>
+
+					<a class="style-nav-heading" href="section-helpers.html#ref-helpers-floats">
+						Float layout
+					</a>
+
+					<a class="style-nav-heading" href="section-helpers.html#ref-helpers-video">
+						Video crop
+					</a>
+
+					<a class="style-nav-heading" href="section-helpers.html#ref-helpers-dist">
+						Distribute
+					</a>
+
+</nav>
+
+<div id="style-main">
+
+		<div id="ref-helpers" class="style-section style-section-depth-1">
+
+			<div class="style-content">
+				<h1>
+					<a class="noLink" href="#ref-helpers">
+						<span class="is-highlighted">4</span>
+						Helpers
+						<small class="is-disabled">#</small>
+					</a>
+				</h1>
+
+
+			</div>
+
+
+		</div>
+		<div id="ref-helpers-grid" class="style-section style-section-depth-2">
+
+			<div class="style-content">
+				<h2>
+					<a class="noLink" href="#ref-helpers-grid">
+						<span class="is-highlighted">4.1</span>
+						Grid Utilities
+						<small class="is-disabled">#</small>
+					</a>
+				</h2>
+
+
+			</div>
+
+
+		</div>
+		<div id="ref-helpers-grid.contain" class="style-section style-section-depth-3">
+
+			<div class="style-content">
+				<h3>
+					<a class="noLink" href="#ref-helpers-grid.contain">
+						<span class="is-highlighted">4.1.1</span>
+						Contain
+						<small class="is-disabled">#</small>
+					</a>
+				</h3>
+
+
+					<div class="style-description">
+						<p>Contain the content with a max-width</p>
+
+					</div>
+			</div>
+
+				<div class="style-modifiers">
+					<div class="style-modifiers-heading">Examples</div>
+						<div class="style-modifier-name">Default styling</div>
+					<div class="style-modifier-example"><div class="box box--m box--gray">
+	<div class="contain [modifier class]">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+	</div>
+</div></div>
+						<div class="style-modifier-name">.contain--s - Small max-width</div>
+						<div class="style-modifier-example"><div class="box box--m box--gray">
+	<div class="contain contain--s">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+	</div>
+</div></div>
+						<div class="style-modifier-name">.contain--m - Medium max-width</div>
+						<div class="style-modifier-example"><div class="box box--m box--gray">
+	<div class="contain contain--m">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+	</div>
+</div></div>
+						<div class="style-modifier-name">.contain--l - Large max-width</div>
+						<div class="style-modifier-example"><div class="box box--m box--gray">
+	<div class="contain contain--l">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+	</div>
+</div></div>
+				</div>
+
+				<div class="style-markup">
+					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;box box--m box--gray&quot;&gt;
+	&lt;div class=&quot;contain [modifier class]&quot;&gt;
+		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+
+		</div>
+		<div id="ref-helpers-grid.lay" class="style-section style-section-depth-3">
+
+			<div class="style-content">
+				<h3>
+					<a class="noLink" href="#ref-helpers-grid.lay">
+						<span class="is-highlighted">4.1.2</span>
+						Layout
+						<small class="is-disabled">#</small>
+					</a>
+				</h3>
+
+
+			</div>
+
+				<div class="style-modifiers">
+					<div class="style-modifiers-heading">Example</div>
+					<div class="style-modifier-example"><div class="lay lay--fixed lay--center lay--s style-layout-example">
+	<div>33.33%</div>
+	<div>33.33%</div>
+	<div>33.33%</div>
+</div>
+<div class="lay lay--fixed lay--center lay--s style-layout-example">
+	<div class="lay-w20">20%</div>
+	<div>35%</div>
+	<div>35%</div>
+	<div class="lay-w10">10%</div>
+</div>
+<div class="lay lay--fixed lay--s style-layout-example">
+	<div class="lay--left">Left</div>
+	<div class="lay--center">Center</div>
+	<div class="lay--right">Right</div>
+</div></div>
+				</div>
+
+				<div class="style-markup">
+					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;lay lay--fixed lay--center lay--s style-layout-example&quot;&gt;
+	&lt;div&gt;33.33%&lt;/div&gt;
+	&lt;div&gt;33.33%&lt;/div&gt;
+	&lt;div&gt;33.33%&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;lay lay--fixed lay--center lay--s style-layout-example&quot;&gt;
+	&lt;div class=&quot;lay-w20&quot;&gt;20%&lt;/div&gt;
+	&lt;div&gt;35%&lt;/div&gt;
+	&lt;div&gt;35%&lt;/div&gt;
+	&lt;div class=&quot;lay-w10&quot;&gt;10%&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;lay lay--fixed lay--s style-layout-example&quot;&gt;
+	&lt;div class=&quot;lay--left&quot;&gt;Left&lt;/div&gt;
+	&lt;div class=&quot;lay--center&quot;&gt;Center&lt;/div&gt;
+	&lt;div class=&quot;lay--right&quot;&gt;Right&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+
+		</div>
+		<div id="ref-helpers-grid.lay.horizontal" class="style-section style-section-depth-4">
+
+			<div class="style-content">
+				<h4>
+					<a class="noLink" href="#ref-helpers-grid.lay.horizontal">
+						<span class="is-highlighted">4.1.2.1</span>
+						Horizontal content alignment
+						<small class="is-disabled">#</small>
+					</a>
+				</h4>
+
+
+			</div>
+
+				<div class="style-modifiers">
+					<div class="style-modifiers-heading">Examples</div>
+						<div class="style-modifier-name">Default styling</div>
+					<div class="style-modifier-example"><div class="lay lay--fixed lay--s [modifier class] style-layout-example">
+	<div class="[modifier class]">33.33%</div>
+	<div class="[modifier class]">33.33%</div>
+	<div class="[modifier class]">33.33%</div>
+</div></div>
+						<div class="style-modifier-name">.lay--left - Content left</div>
+						<div class="style-modifier-example"><div class="lay lay--fixed lay--s lay--left style-layout-example">
+	<div class="lay--left">33.33%</div>
+	<div class="lay--left">33.33%</div>
+	<div class="lay--left">33.33%</div>
+</div></div>
+						<div class="style-modifier-name">.lay--center - Content center</div>
+						<div class="style-modifier-example"><div class="lay lay--fixed lay--s lay--center style-layout-example">
+	<div class="lay--center">33.33%</div>
+	<div class="lay--center">33.33%</div>
+	<div class="lay--center">33.33%</div>
+</div></div>
+						<div class="style-modifier-name">.lay--right - Content right</div>
+						<div class="style-modifier-example"><div class="lay lay--fixed lay--s lay--right style-layout-example">
+	<div class="lay--right">33.33%</div>
+	<div class="lay--right">33.33%</div>
+	<div class="lay--right">33.33%</div>
+</div></div>
+				</div>
+
+				<div class="style-markup">
+					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;lay lay--fixed lay--s [modifier class] style-layout-example&quot;&gt;
+	&lt;div class=&quot;[modifier class]&quot;&gt;33.33%&lt;/div&gt;
+	&lt;div class=&quot;[modifier class]&quot;&gt;33.33%&lt;/div&gt;
+	&lt;div class=&quot;[modifier class]&quot;&gt;33.33%&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+
+		</div>
+		<div id="ref-helpers-grid.lay.padding" class="style-section style-section-depth-4">
+
+			<div class="style-content">
+				<h4>
+					<a class="noLink" href="#ref-helpers-grid.lay.padding">
+						<span class="is-highlighted">4.1.2.2</span>
+						Padding
+						<small class="is-disabled">#</small>
+					</a>
+				</h4>
+
+
+			</div>
+
+				<div class="style-modifiers">
+					<div class="style-modifiers-heading">Examples</div>
+						<div class="style-modifier-name">Default styling</div>
+					<div class="style-modifier-example"><div class="lay lay--fixed lay--center [modifier class] style-layout-example">
+	<div>33.33%</div>
+	<div>33.33%</div>
+	<div>33.33%</div>
+</div></div>
+						<div class="style-modifier-name">.lay--s - Small padding</div>
+						<div class="style-modifier-example"><div class="lay lay--fixed lay--center lay--s style-layout-example">
+	<div>33.33%</div>
+	<div>33.33%</div>
+	<div>33.33%</div>
+</div></div>
+						<div class="style-modifier-name">.lay--m - Medium padding</div>
+						<div class="style-modifier-example"><div class="lay lay--fixed lay--center lay--m style-layout-example">
+	<div>33.33%</div>
+	<div>33.33%</div>
+	<div>33.33%</div>
+</div></div>
+						<div class="style-modifier-name">.lay--l - Large padding</div>
+						<div class="style-modifier-example"><div class="lay lay--fixed lay--center lay--l style-layout-example">
+	<div>33.33%</div>
+	<div>33.33%</div>
+	<div>33.33%</div>
+</div></div>
+				</div>
+
+				<div class="style-markup">
+					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;lay lay--fixed lay--center [modifier class] style-layout-example&quot;&gt;
+	&lt;div&gt;33.33%&lt;/div&gt;
+	&lt;div&gt;33.33%&lt;/div&gt;
+	&lt;div&gt;33.33%&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+
+		</div>
+		<div id="ref-helpers-grid.lay.vertical" class="style-section style-section-depth-4">
+
+			<div class="style-content">
+				<h4>
+					<a class="noLink" href="#ref-helpers-grid.lay.vertical">
+						<span class="is-highlighted">4.1.2.3</span>
+						Vertical content alignment
+						<small class="is-disabled">#</small>
+					</a>
+				</h4>
+
+
+			</div>
+
+				<div class="style-modifiers">
+					<div class="style-modifiers-heading">Examples</div>
+						<div class="style-modifier-name">Default styling</div>
+					<div class="style-modifier-example"><div class="lay lay--fixed lay--s [modifier class] style-layout-example">
+	<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+	<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nam, inventore iste odio! Qui ad cumque quas possimus fugit iusto fugiat adipisci itaque quidem vero dolorem accusantium, illo delectus corporis.</div>
+	<div>Lorem ipsum dolor sit amet.</div>
+</div></div>
+						<div class="style-modifier-name">.lay--top - Align top</div>
+						<div class="style-modifier-example"><div class="lay lay--fixed lay--s lay--top style-layout-example">
+	<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+	<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nam, inventore iste odio! Qui ad cumque quas possimus fugit iusto fugiat adipisci itaque quidem vero dolorem accusantium, illo delectus corporis.</div>
+	<div>Lorem ipsum dolor sit amet.</div>
+</div></div>
+						<div class="style-modifier-name">.lay--middle - Align middle</div>
+						<div class="style-modifier-example"><div class="lay lay--fixed lay--s lay--middle style-layout-example">
+	<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+	<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nam, inventore iste odio! Qui ad cumque quas possimus fugit iusto fugiat adipisci itaque quidem vero dolorem accusantium, illo delectus corporis.</div>
+	<div>Lorem ipsum dolor sit amet.</div>
+</div></div>
+						<div class="style-modifier-name">.lay--bottom - Align bottom</div>
+						<div class="style-modifier-example"><div class="lay lay--fixed lay--s lay--bottom style-layout-example">
+	<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+	<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nam, inventore iste odio! Qui ad cumque quas possimus fugit iusto fugiat adipisci itaque quidem vero dolorem accusantium, illo delectus corporis.</div>
+	<div>Lorem ipsum dolor sit amet.</div>
+</div></div>
+				</div>
+
+				<div class="style-markup">
+					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;lay lay--fixed lay--s [modifier class] style-layout-example&quot;&gt;
+	&lt;div&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/div&gt;
+	&lt;div&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nam, inventore iste odio! Qui ad cumque quas possimus fugit iusto fugiat adipisci itaque quidem vero dolorem accusantium, illo delectus corporis.&lt;/div&gt;
+	&lt;div&gt;Lorem ipsum dolor sit amet.&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+
+		</div>
+		<div id="ref-helpers-type" class="style-section style-section-depth-2">
+
+			<div class="style-content">
+				<h2>
+					<a class="noLink" href="#ref-helpers-type">
+						<span class="is-highlighted">4.2</span>
+						Typography
+						<small class="is-disabled">#</small>
+					</a>
+				</h2>
+
+
+			</div>
+
+
+		</div>
+		<div id="ref-helpers-type.size" class="style-section style-section-depth-3">
+
+			<div class="style-content">
+				<h3>
+					<a class="noLink" href="#ref-helpers-type.size">
+						<span class="is-highlighted">4.2.1</span>
+						Font Sizes
+						<small class="is-disabled">#</small>
+					</a>
+				</h3>
+
+
+			</div>
+
+				<div class="style-modifiers">
+					<div class="style-modifiers-heading">Example</div>
+					<div class="style-modifier-example"><p class="sizeXS">.sizeXS</p>
+<p class="sizeS">.sizeS</p>
+<p class="sizeM">.sizeM</p>
+<p class="sizeL">.sizeL</p>
+<p class="sizeXL">.sizeXL</p>
+<p class="sizeXXL">.sizeXXL</p></div>
+				</div>
+
+				<div class="style-markup">
+					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p class=&quot;sizeXS&quot;&gt;.sizeXS&lt;/p&gt;
+&lt;p class=&quot;sizeS&quot;&gt;.sizeS&lt;/p&gt;
+&lt;p class=&quot;sizeM&quot;&gt;.sizeM&lt;/p&gt;
+&lt;p class=&quot;sizeL&quot;&gt;.sizeL&lt;/p&gt;
+&lt;p class=&quot;sizeXL&quot;&gt;.sizeXL&lt;/p&gt;
+&lt;p class=&quot;sizeXXL&quot;&gt;.sizeXXL&lt;/p&gt;</code></pre>
+				</div>
+
+		</div>
+		<div id="ref-helpers-type.weight" class="style-section style-section-depth-3">
+
+			<div class="style-content">
+				<h3>
+					<a class="noLink" href="#ref-helpers-type.weight">
+						<span class="is-highlighted">4.2.2</span>
+						Weights
+						<small class="is-disabled">#</small>
+					</a>
+				</h3>
+
+
+			</div>
+
+				<div class="style-modifiers">
+					<div class="style-modifiers-heading">Example</div>
+					<div class="style-modifier-example"><p class="weight700">.weight700</p>
+<p class="weight600">.weight600</p>
+<p class="weight500">.weight500</p>
+<p class="weight400">.weight400</p>
+<p class="weight300">.weight300</p>
+<p class="weight200">.weight200</p></div>
+				</div>
+
+				<div class="style-markup">
+					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p class=&quot;weight700&quot;&gt;.weight700&lt;/p&gt;
+&lt;p class=&quot;weight600&quot;&gt;.weight600&lt;/p&gt;
+&lt;p class=&quot;weight500&quot;&gt;.weight500&lt;/p&gt;
+&lt;p class=&quot;weight400&quot;&gt;.weight400&lt;/p&gt;
+&lt;p class=&quot;weight300&quot;&gt;.weight300&lt;/p&gt;
+&lt;p class=&quot;weight200&quot;&gt;.weight200&lt;/p&gt;</code></pre>
+				</div>
+
+		</div>
+		<div id="ref-helpers-type.swatch" class="style-section style-section-depth-3">
+
+			<div class="style-content">
+				<h3>
+					<a class="noLink" href="#ref-helpers-type.swatch">
+						<span class="is-highlighted">4.2.3</span>
+						Swatches
+						<small class="is-disabled">#</small>
+					</a>
+				</h3>
+
+
+			</div>
+
+				<div class="style-modifiers">
+					<div class="style-modifiers-heading">Example</div>
+					<div class="style-modifier-example"><p class="white">.white</p>
+<p class="red">.red</p>
+<p class="blue">.blue</p></div>
+				</div>
+
+				<div class="style-markup">
+					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p class=&quot;white&quot;&gt;.white&lt;/p&gt;
+&lt;p class=&quot;red&quot;&gt;.red&lt;/p&gt;
+&lt;p class=&quot;blue&quot;&gt;.blue&lt;/p&gt;</code></pre>
+				</div>
+
+		</div>
+		<div id="ref-helpers-type.alpha" class="style-section style-section-depth-3">
+
+			<div class="style-content">
+				<h3>
+					<a class="noLink" href="#ref-helpers-type.alpha">
+						<span class="is-highlighted">4.2.4</span>
+						Alpha
+						<small class="is-disabled">#</small>
+					</a>
+				</h3>
+
+
+			</div>
+
+				<div class="style-modifiers">
+					<div class="style-modifiers-heading">Example</div>
+					<div class="style-modifier-example"><p class="alpha10">.alpha10</p>
+<p class="alpha20">.alpha20</p>
+<p class="alpha30">.alpha30</p>
+<p class="alpha40">.alpha40</p>
+<p class="alpha50">.alpha50</p>
+<p class="alpha60">.alpha60</p>
+<p class="alpha70">.alpha70</p>
+<p class="alpha80">.alpha80</p>
+<p class="alpha90">.alpha90</p></div>
+				</div>
+
+				<div class="style-markup">
+					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p class=&quot;alpha10&quot;&gt;.alpha10&lt;/p&gt;
+&lt;p class=&quot;alpha20&quot;&gt;.alpha20&lt;/p&gt;
+&lt;p class=&quot;alpha30&quot;&gt;.alpha30&lt;/p&gt;
+&lt;p class=&quot;alpha40&quot;&gt;.alpha40&lt;/p&gt;
+&lt;p class=&quot;alpha50&quot;&gt;.alpha50&lt;/p&gt;
+&lt;p class=&quot;alpha60&quot;&gt;.alpha60&lt;/p&gt;
+&lt;p class=&quot;alpha70&quot;&gt;.alpha70&lt;/p&gt;
+&lt;p class=&quot;alpha80&quot;&gt;.alpha80&lt;/p&gt;
+&lt;p class=&quot;alpha90&quot;&gt;.alpha90&lt;/p&gt;</code></pre>
+				</div>
+
+		</div>
+		<div id="ref-helpers-type.disable" class="style-section style-section-depth-3">
+
+			<div class="style-content">
+				<h3>
+					<a class="noLink" href="#ref-helpers-type.disable">
+						<span class="is-highlighted">4.2.5</span>
+						Disablers
+						<small class="is-disabled">#</small>
+					</a>
+				</h3>
+
+
+			</div>
+
+				<div class="style-modifiers">
+					<div class="style-modifiers-heading">Example</div>
+					<div class="style-modifier-example"><a href="#" class="noLink">.noLink</a>
+<ul class="noList">
+	<li>.noList</li>
+	<li>.noList</li>
+</ul></div>
+				</div>
+
+				<div class="style-markup">
+					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;noLink&quot;&gt;.noLink&lt;/a&gt;
+&lt;ul class=&quot;noList&quot;&gt;
+	&lt;li&gt;.noList&lt;/li&gt;
+	&lt;li&gt;.noList&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+				</div>
+
+		</div>
+		<div id="ref-helpers-type.misc" class="style-section style-section-depth-3">
+
+			<div class="style-content">
+				<h3>
+					<a class="noLink" href="#ref-helpers-type.misc">
+						<span class="is-highlighted">4.2.6</span>
+						Misc
+						<small class="is-disabled">#</small>
+					</a>
+				</h3>
+
+
+			</div>
+
+				<div class="style-modifiers">
+					<div class="style-modifiers-heading">Example</div>
+					<div class="style-modifier-example"><p class="preamble">.preamble</p>
+<p class="uppercase">.uppercase</p>
+<p class="spaced">.spaced</p>
+<p class="center">.center</p></div>
+				</div>
+
+				<div class="style-markup">
+					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p class=&quot;preamble&quot;&gt;.preamble&lt;/p&gt;
+&lt;p class=&quot;uppercase&quot;&gt;.uppercase&lt;/p&gt;
+&lt;p class=&quot;spaced&quot;&gt;.spaced&lt;/p&gt;
+&lt;p class=&quot;center&quot;&gt;.center&lt;/p&gt;</code></pre>
+				</div>
+
+		</div>
+		<div id="ref-helpers-offs" class="style-section style-section-depth-2">
+
+			<div class="style-content">
+				<h2>
+					<a class="noLink" href="#ref-helpers-offs">
+						<span class="is-highlighted">4.3</span>
+						Responsive off&#x27;s
+						<small class="is-disabled">#</small>
+					</a>
+				</h2>
+
+
+			</div>
+
+				<div class="style-modifiers">
+					<div class="style-modifiers-heading">Examples</div>
+						<div class="style-modifier-name">Default styling</div>
+					<div class="style-modifier-example"><div class="hidden [modifier class]">Hidden</div></div>
+						<div class="style-modifier-name">.hidden--offMobile - Hidden except on mobile</div>
+						<div class="style-modifier-example"><div class="hidden hidden--offMobile">Hidden</div></div>
+						<div class="style-modifier-name">.hidden--offTablet - Hidden except on tablet</div>
+						<div class="style-modifier-example"><div class="hidden hidden--offTablet">Hidden</div></div>
+						<div class="style-modifier-name">.hidden--offDesktop - Hidden except on desktop</div>
+						<div class="style-modifier-example"><div class="hidden hidden--offDesktop">Hidden</div></div>
+				</div>
+
+				<div class="style-markup">
+					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;hidden [modifier class]&quot;&gt;Hidden&lt;/div&gt;</code></pre>
+				</div>
+
+		</div>
+		<div id="ref-helpers-floats" class="style-section style-section-depth-2">
+
+			<div class="style-content">
+				<h2>
+					<a class="noLink" href="#ref-helpers-floats">
+						<span class="is-highlighted">4.4</span>
+						Float layout
+						<small class="is-disabled">#</small>
+					</a>
+				</h2>
+
+
+			</div>
+
+				<div class="style-modifiers">
+					<div class="style-modifiers-heading">Examples</div>
+						<div class="style-modifier-name">Default styling</div>
+					<div class="style-modifier-example"><span class="left [modifier class]">Left</span>
+<span class="right [modifier class]">Right</span></div>
+						<div class="style-modifier-name">.right--offMobile - Does not float on mobile</div>
+						<div class="style-modifier-example"><span class="left right--offMobile">Left</span>
+<span class="right right--offMobile">Right</span></div>
+						<div class="style-modifier-name">.right--offTablet - Does not float on tablet</div>
+						<div class="style-modifier-example"><span class="left right--offTablet">Left</span>
+<span class="right right--offTablet">Right</span></div>
+						<div class="style-modifier-name">.right--offDesktop - Does not float on desktop</div>
+						<div class="style-modifier-example"><span class="left right--offDesktop">Left</span>
+<span class="right right--offDesktop">Right</span></div>
+				</div>
+
+				<div class="style-markup">
+					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;span class=&quot;left [modifier class]&quot;&gt;Left&lt;/span&gt;
+&lt;span class=&quot;right [modifier class]&quot;&gt;Right&lt;/span&gt;</code></pre>
+				</div>
+
+		</div>
+		<div id="ref-helpers-video" class="style-section style-section-depth-2">
+
+			<div class="style-content">
+				<h2>
+					<a class="noLink" href="#ref-helpers-video">
+						<span class="is-highlighted">4.5</span>
+						Video crop
+						<small class="is-disabled">#</small>
+					</a>
+				</h2>
+
+
+					<div class="style-description">
+						<p>Wrap video elements with .videoCrop to make element responsive while keeping aspect ratio</p>
+
+					</div>
+			</div>
+
+				<div class="style-modifiers">
+					<div class="style-modifiers-heading">Example</div>
+					<div class="style-modifier-example"><div class="videoCrop">
+	<iframe src="//www.youtube.com/embed/isQYHncq-IY?hd=1&amp;rel=0&amp;vq=hd720" frameborder="0" allowfullscreen></iframe>
+</div></div>
+				</div>
+
+				<div class="style-markup">
+					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;videoCrop&quot;&gt;
+	&lt;iframe src=&quot;//www.youtube.com/embed/isQYHncq-IY?hd=1&amp;amp;rel=0&amp;amp;vq=hd720&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+
+		</div>
+		<div id="ref-helpers-dist" class="style-section style-section-depth-2">
+
+			<div class="style-content">
+				<h2>
+					<a class="noLink" href="#ref-helpers-dist">
+						<span class="is-highlighted">4.6</span>
+						Distribute
+						<small class="is-disabled">#</small>
+					</a>
+				</h2>
+
+
+					<div class="style-description">
+						<p>Spaced-out inline-block&#39;s</p>
+
+					</div>
+			</div>
+
+				<div class="style-modifiers">
+					<div class="style-modifiers-heading">Example</div>
+					<div class="style-modifier-example"><div class="dist">
+	<span>Item</span>
+	<span>Item</span>
+	<span>Item</span>
+	<span>Item</span>
+</div></div>
+				</div>
+
+				<div class="style-markup">
+					<pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;dist&quot;&gt;
+	&lt;span&gt;Item&lt;/span&gt;
+	&lt;span&gt;Item&lt;/span&gt;
+	&lt;span&gt;Item&lt;/span&gt;
+	&lt;span&gt;Item&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+
+		</div>
+</div>
+
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/selectize/dist/js/standalone/selectize.min.js"></script>
+<script src="/dist/js/main.js"></script>
+<script src="public/prettify.js"></script>
+<script src="public/main.js"></script>
+<script>
+	prettyPrint();
+</script>
+
+
+</body>
+</html>

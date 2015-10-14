@@ -1,0 +1,52 @@
+/*
+Globals
+
+Default global settings
+
+<div class="style-markup"><pre class="prettyprint linenums lang-css"><code data-language="css">&lowast;, &lowast;:after, &lowast;:before {
+	.box-sizing(border-box);
+}
+&lowast; > &lowast;:last-child {
+	margin-bottom: 0;
+}
+</code></pre></div>
+
+Styleguide: base.global
+ */
+
+*, *:after, *:before {
+	.box-sizing(border-box);
+}
+
+* > *:last-child {
+	margin-bottom: 0;
+}
+
+html {
+	height: 100%;
+	position: relative;
+
+	font-size: 10px;
+
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+body {
+	height: 100%;
+
+	background-color: @swatchBody;
+	
+	color: @swatchFont;
+	font-family: @fontFamily;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.5;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+img {
+	max-width: 100%;
+}

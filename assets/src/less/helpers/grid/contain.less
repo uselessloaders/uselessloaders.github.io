@@ -1,0 +1,38 @@
+/*
+Contain
+
+Contain the content with a max-width
+
+.contain--s - Small max-width
+.contain--m - Medium max-width
+.contain--l - Large max-width
+
+Markup:
+<div class="box box--m box--gray">
+	<div class="contain {{modifier_class}}">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+	</div>
+</div>
+
+Styleguide: helpers.grid.contain
+ */
+
+.contain {
+	.contain--l;
+
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+
+	&.contain--s {
+		max-width: @widthS;
+	}
+
+	&.contain--m {
+		max-width: @widthM;
+	}
+
+	&.contain--l {
+		max-width: @widthL;
+	}
+}

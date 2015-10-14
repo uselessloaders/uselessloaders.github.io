@@ -1,0 +1,72 @@
+/*
+Mixins
+
+Weight: 2
+
+Styleguide: base.mixins
+*/
+
+
+/*
+.clearfix()
+
+Clearfix for float layouts. .clearfix for quick access.
+
+Styleguide: base.mixins.clearfix
+*/
+
+.clearfix() {
+	&:after {
+		display: table;
+
+		clear: both;
+		content: '';
+	}
+}
+
+.clearfix {
+	.clearfix();
+}
+
+
+/*
+.ir()
+
+Hides text. .ir for quick access.
+
+Styleguide: base.mixins.ir
+*/
+
+.ir() {
+	border: 0;
+
+	background-color: transparent;
+	
+	color: transparent;
+	font: 0/0 a;
+	text-shadow: none;
+}
+
+.ir {
+	.ir();
+}
+
+
+/*
+.ellipsis()
+
+Hides overflowing texts. Element requires inline-block or block. .ellipsis for quick access.
+
+Styleguide: base.mixins.ellipsis
+*/
+
+.ellipsis() {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	overflow: hidden;
+}
+
+.ellipsis {
+	.ellipsis();
+}

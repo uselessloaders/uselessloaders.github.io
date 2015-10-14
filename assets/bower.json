@@ -1,0 +1,8 @@
+{
+  "name": "uselessloaders",
+  "private": true,
+  "dependencies": {
+    "normalize-less": "*",
+    "lesshat": "~3.0.2"
+  }
+}

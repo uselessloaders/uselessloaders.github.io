@@ -1,0 +1,55 @@
+/*
+Float layout
+
+.right--offMobile  - Does not float on mobile
+.right--offTablet  - Does not float on tablet
+.right--offDesktop - Does not float on desktop
+
+Markup:
+<span class="left {{modifier_class}}">Left</span>
+<span class="right {{modifier_class}}">Right</span>
+
+Weight: 4
+
+Styleguide: helpers.floats
+*/
+
+.left {
+	@media @mobile {
+		&:not(.left--offMobile) {
+			float: left;
+		}
+	}
+
+	@media @tablet {
+		&:not(.left--offTablet) {
+			float: left;
+		}
+	}
+
+	@media @desktopUp {
+		&:not(.left--offDesktop) {
+			float: left;
+		}
+	}
+}
+
+.right {
+	@media @mobile {
+		&:not(.right--offMobile) {
+			float: right;
+		}
+	}
+
+	@media @tablet {
+		&:not(.right--offTablet) {
+			float: right;
+		}
+	}
+
+	@media @desktopUp {
+		&:not(.right--offDesktop) {
+			float: right;
+		}
+	}
+}

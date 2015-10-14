@@ -1,0 +1,38 @@
+{
+	"less": {
+		"src": "src/less/main.less",
+		"dist": "dist/css",
+		"id": "main"
+	},
+	"js": {
+		"src": "src/js/main.js",
+		"dist": "dist/js",
+		"id": "main"
+	},
+	"svg": {
+		"src": "src/svg/**/*.svg",
+		"dist": "dist/svg",
+		"id": "main"
+	},
+	"styleguide": {
+		"src": "src/less",
+		"template": "src/styleguide",
+		"dist": "dist/styleguide",
+		"css": "/dist/css/main.css"
+	},
+	"rev": {
+		"src": [
+			"dist/css/main.css",
+			"dist/js/main.js"
+		],
+		"dist": "dist"
+	},
+	"bs": {
+		"host": "<%= vhost %>"
+	},
+	"watch": {
+		"svg": "src/svg/**/*.svg",
+		"less": "src/less/**/*.less",
+		"js": "src/js/**/*.js"
+	}
+}

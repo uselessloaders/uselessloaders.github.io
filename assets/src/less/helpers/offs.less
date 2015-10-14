@@ -1,0 +1,37 @@
+/*
+Responsive off's
+
+.hidden--offMobile  - Hidden except on mobile
+.hidden--offTablet  - Hidden except on tablet
+.hidden--offDesktop - Hidden except on desktop
+
+Markup:
+<div class="hidden {{modifier_class}}">Hidden</div>
+
+Weight: 2
+
+Styleguide: helpers.offs
+ */
+
+.hidden {
+	@media @mobile {
+		&:not(.hidden--offMobile),
+		&Mobile {
+			display: none;
+		}
+	}
+
+	@media @tablet {
+		&:not(.hidden--offTablet),
+		&Tablet {
+			display: none;
+		}
+	}
+
+	@media @desktopUp {
+		&:not(.hidden--offDesktop),
+		&Dektop {
+			display: none;
+		}
+	}
+}

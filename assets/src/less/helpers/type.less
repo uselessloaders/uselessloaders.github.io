@@ -1,0 +1,173 @@
+/*
+Typography
+
+Weight: 1
+
+Styleguide: helpers.type
+ */
+
+/*
+Font Sizes
+
+Markup:
+<p class="sizeXS">.sizeXS</p>
+<p class="sizeS">.sizeS</p>
+<p class="sizeM">.sizeM</p>
+<p class="sizeL">.sizeL</p>
+<p class="sizeXL">.sizeXL</p>
+<p class="sizeXXL">.sizeXXL</p>
+
+Weight: 0
+
+Styleguide: helpers.type.size
+ */
+
+.sizeXS   { font-size: 1.4rem; }
+.sizeS    { font-size: 1.6rem; }
+.sizeM    { font-size: 1.8rem; }
+@media @tabletUp {
+.sizeL    { font-size: 2.0rem; }
+.sizeXL   { font-size: 2.2rem; }
+.sizeXXL  { font-size: 2.4rem; } 
+}
+
+/*
+Weights
+
+Markup:
+<p class="weight700">.weight700</p>
+<p class="weight600">.weight600</p>
+<p class="weight500">.weight500</p>
+<p class="weight400">.weight400</p>
+<p class="weight300">.weight300</p>
+<p class="weight200">.weight200</p>
+
+Weight: 1
+
+Styleguide: helpers.type.weight
+ */
+
+.weight700 { font-weight: 700; }
+.weight600 { font-weight: 600; }
+.weight500 { font-weight: 500; }
+.weight400 { font-weight: 400; }
+.weight300 { font-weight: 300; }
+.weight200 { font-weight: 200; }
+
+
+/*
+Swatches
+
+Markup:
+<p class="white">.white</p>
+<p class="red">.red</p>
+<p class="blue">.blue</p>
+
+Weight: 2
+
+Styleguide: helpers.type.swatch
+ */
+
+.white {
+	color: #fff !important;
+	fill: #fff !important;
+}
+
+.red {
+	color: @swatchRed !important;
+	fill: @swatchRed !important;
+}
+
+.blue {
+	color: @swatchBlue !important;
+	fill: @swatchBlue !important;
+}
+
+
+/*
+Alpha
+
+Markup:
+<p class="alpha10">.alpha10</p>
+<p class="alpha20">.alpha20</p>
+<p class="alpha30">.alpha30</p>
+<p class="alpha40">.alpha40</p>
+<p class="alpha50">.alpha50</p>
+<p class="alpha60">.alpha60</p>
+<p class="alpha70">.alpha70</p>
+<p class="alpha80">.alpha80</p>
+<p class="alpha90">.alpha90</p>
+
+Weight: 3
+
+Styleguide: helpers.type.alpha
+ */
+
+.alpha10 { opacity: .1; }
+.alpha20 { opacity: .2; }
+.alpha30 { opacity: .3; }
+.alpha40 { opacity: .4; }
+.alpha50 { opacity: .5; }
+.alpha60 { opacity: .6; }
+.alpha70 { opacity: .7; }
+.alpha80 { opacity: .8; }
+.alpha90 { opacity: .9; }
+
+
+/*
+Disablers
+
+Markup:
+<a href="#" class="noLink">.noLink</a>
+<ul class="noList">
+	<li>.noList</li>
+	<li>.noList</li>
+</ul>
+
+Weight: 4
+
+Styleguide: helpers.type.disable
+ */
+
+.noLink {
+	color: inherit;
+	text-decoration: none;
+}
+
+.noList {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+/*
+Misc
+
+Markup:
+<p class="preamble">.preamble</p>
+<p class="uppercase">.uppercase</p>
+<p class="spaced">.spaced</p>
+<p class="center">.center</p>
+
+Weight: 100
+
+Styleguide: helpers.type.misc
+ */
+
+.preamble {
+	font-size: 2.8rem;
+	line-height: 1.2em;
+}
+
+.spaced {
+	letter-spacing: .15em;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.center {
+	text-align: center;
+}

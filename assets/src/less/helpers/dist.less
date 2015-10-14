@@ -1,0 +1,92 @@
+/*
+Distribute
+
+Spaced-out inline-block's
+
+Markup:
+<div class="dist">
+	<span>Item</span>
+	<span>Item</span>
+	<span>Item</span>
+	<span>Item</span>
+</div>
+
+Weight: 8
+
+Styleguide: helpers.dist
+*/
+
+
+.dist() {
+	position: relative;
+
+	> * {
+		display: inline-block;
+
+		& + * {
+			margin-top: 0;
+		}
+	}
+
+	// Spacing
+	
+	&.dist--s {
+		> * + * {
+			margin-left: 1rem;
+		}
+	}
+	
+	&.dist--m {
+		> * + * {
+			margin-left: 2rem;
+		}
+	}
+	
+	&.dist--l {
+		> * + * {
+			margin-left: 3rem;
+		}
+	}
+
+	// Aligning
+	
+	&.dist--left {
+		text-align: left;
+	}
+	
+	&.dist--right {
+		text-align: right;
+	}
+	
+	&.dist--center {
+		text-align: center;
+	}
+}
+
+.dist {
+	> * {
+		display: block;
+
+		& + * {
+			margin-top: 1rem;
+		}
+	}
+
+	@media @mobile {
+		&:not(.dist--offMobile) {
+			.dist();
+		}
+	}
+
+	@media @tablet {
+		&:not(.dist--offTablet) {
+			.dist();
+		}
+	}
+
+	@media @desktopUp {
+		&:not(.dist--offDesktop) {
+			.dist();
+		}
+	}
+}

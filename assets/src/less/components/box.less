@@ -1,0 +1,162 @@
+/*
+Box
+
+Generic content block
+
+Styleguide: components.box
+ */
+
+/*
+Colors
+
+.box--white - White box
+.box--yellow - Yellow box
+.box--gray - Gray box
+
+Markup:
+<div class="box {{modifier_class}}">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+</div>
+
+Weight: 1
+
+Styleguide: components.box.colors
+ */
+
+/*
+Sizes
+
+.box--xxs - Padding 1rem
+.box--xs - Padding 2rem
+.box--s - Padding 3rem
+.box--m - Padding 4rem
+.box--l - Padding 5rem
+.box--xl - Padding 6rem
+.box--xxl - Padding 7rem
+
+Markup:
+<div class="box box--yellow {{modifier_class}}">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+</div>
+
+Weight: 2
+
+Styleguide: components.box.sizes
+ */
+
+.box {
+	position: relative;
+	
+	// Colors
+
+	.colorize(@bgColor, @textColor: @swatchFont) {
+		background-color: @bgColor;
+
+		// color: @textColor;
+
+		// *, &Lighten *, &Darken * {
+		// 	fill: @textColor;
+		// }
+
+		&Lighten { background-color: lighten(@bgColor, 5%); }
+		&Darken { background-color: saturate( darken(@bgColor, 5%), -15% ); }
+	}
+
+	&.box--white {
+		.colorize(#fff, @swatchFont);
+	}
+
+	&.box--yellow {
+		.colorize(@swatchYellow);
+	}
+
+	&.box--gray {
+		.colorize(@swatchGray);
+	}
+
+	&.box--darkGray {
+		.colorize(#151515);
+	}
+
+	&.box--black {
+		.colorize(@swatchBlack, #ffffff);
+	}
+
+	// Sizes
+
+	.size(@size) {
+		padding: @size;
+
+		section& {
+			padding-top: 0;
+		}
+	}
+
+	&.box--xxxs {
+		.size(.5rem);
+	}
+
+	&.box--xxs {
+		.size(1.5rem);
+	}
+
+	&.box--xs {
+		.size(2rem);
+	}
+
+	&.box--s {
+		.size(3rem);
+	}
+
+	&.box--m {
+		.size(3rem);
+
+		@media @tabletUp {
+			.size(4rem);
+		}
+	}
+
+	&.box--l {
+		.size(3rem);
+
+		@media @tabletUp {
+			.size(5rem);
+		}
+	}
+
+	&.box--xl {
+		.size(3rem);
+
+		@media @tabletUp {
+			.size(6rem);
+		}
+	}
+
+	&.box--xxl {
+		.size(3rem);
+
+		@media @desktopUp {
+			.size(8rem);
+		}
+	}
+
+	// Misc
+
+	&.box--collapsed {
+		padding-top: 0;
+	}
+
+	&.box--offTabletDown {
+		@media @tabletDown {
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
+
+	&.box--onTabletDown {
+		@media @tabletDown {
+			padding-right: 3rem;
+			padding-left: 3rem; 
+		}
+	}
+}

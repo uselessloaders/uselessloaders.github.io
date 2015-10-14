@@ -1,0 +1,29 @@
+/*
+Video crop
+
+Wrap video elements with .videoCrop to make element responsive while keeping aspect ratio
+
+Markup:
+<div class="videoCrop">
+	<iframe src="//www.youtube.com/embed/isQYHncq-IY?hd=1&amp;rel=0&amp;vq=hd720" frameborder="0" allowfullscreen></iframe>
+</div>
+
+Weight: 5
+
+Styleguide: helpers.video
+ */
+
+.videoCrop {
+	padding-bottom: 56.25% !important;
+	position: relative;
+	width: 100%;
+
+	overflow: hidden;
+
+	> * {
+		.size(100%);
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+}

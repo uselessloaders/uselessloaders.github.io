@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]>            <html class="no_js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IEMobile 7]>          <html class="no_js iem7" lang="en"> <![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>  <html class="no_js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>                <html class="no_js lt-ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--> <html class="no_js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="/dist/css/main.css">
+
+
+	<title>Styleguide</title>
+</head>
+<body id="style">
+
+<header id="style-header">
+	<div class="style-header-brand">
+		<img src="public/logo.svg">
+	</div>
+	<nav class="style-header-nav">
+		<a href="./">Styleguide</a>
+
+			<a href="section-lib.html">External libraries</a>
+			<a href="section-base.html">Base</a>
+			<a href="section-components.html">Components</a>
+			<a href="section-helpers.html">Helpers</a>
+	</nav>
+</header>
+
+<nav id="style-nav">
+</nav>
+
+<div id="style-main">
+		 <h1 id="styleguide-coding-standards">Styleguide &amp; Coding standards</h1>
+<p>Make sure to comment your css declarations like this to have them included in this living styleguide:</p>
+<p><div class="style-markup"><pre class="prettyprint linenums lang-css"><code data-language="css">/*
+Textarea
+&nbsp;
+It&#39;s a textarea.
+&nbsp;
+Markup:
+&lt;textarea&gt;This is content&lt;/textarea&gt;
+&nbsp;
+Styleguide: forms.textarea
+*/
+&nbsp;
+textarea {
+    background: #eee;
+}
+</code></pre></div>
+&nbsp;</p>
+<p>The css structure is inspired by SMACSS:
+<a href="http://smacss.com/book/categorizing">http://smacss.com/book/categorizing</a></p>
+<p>Formatting code is as well inspired by SMACSS:
+<a href="http://smacss.com/book/formatting">http://smacss.com/book/formatting</a></p>
+<p>Follow this order to keep the properties clean and easy to use:</p>
+<ul>
+<li>Mixins</li>
+<li>Box</li>
+<li>Border</li>
+<li>Background</li>
+<li>Text</li>
+<li>Other</li>
+</ul>
+<p>Example:</p>
+<p><div class="style-markup"><pre class="prettyprint linenums lang-css"><code data-language="css">.component {
+    .mixin(); // mixin setting attributes from more then one category
+    &nbsp;
+    display: block;
+    height: 200px;
+    width: 200px;
+    float: left;
+    position: relative;
+    &nbsp;
+    border-radius: 10px;
+    border: 1px solid #333;
+    &nbsp;
+    .box-shadow(10px 10px 5px #888);
+    background-color: #fff;
+    &nbsp;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+</code></pre></div>
+&nbsp;</p>
+<p>For modular css naming conventions please follow:
+<a href="http://smacss.com/book/type-module">http://smacss.com/book/type-module</a></p>
+<p>DISCLAMER: However we will use the name &quot;component&quot; instead of &quot;module&quot;.</p>
+<p>Follow this order to keep the component clean and easy to use:</p>
+<ul>
+<li>Component (For multiple-word class names separate with uppercase, AKA camelCase)<ul>
+<li>Component modifiers (Separate modifiers with 2 dashes &quot;--&quot;)</li>
+<li>Media queries</li>
+</ul>
+</li>
+<li>Sub-Components (Separate modifiers with 1 dash &quot;-&quot;)</li>
+</ul>
+<p>Example:</p>
+<p><div class="style-markup"><pre class="prettyprint linenums lang-css"><code data-language="css">/*
+My component
+&nbsp;
+This is my component
+&nbsp;
+Markup:
+&lt;div class=&quot;component component--modifier&quot;&gt;
+    &lt;h2&gt;Component with modifier&lt;/h2&gt;
+    &lt;div class=&quot;component-subComponent component-subComponent--modifier&quot;&gt;
+        &lt;h3&gt;Sub-Component with modifier&lt;/h3&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&nbsp;
+Styleguide forms.textarea
+*/
+.component {
+    // Component properties
+    &nbsp;
+    @media @mobileOnly {
+        // Mobile properties for the component
+    }
+    &nbsp;
+    &amp;.component--modifier {
+        // Modifier properties
+        &nbsp;
+        @media @mobileOnly {
+            // Mobile properties for the modifier
+        }
+    }
+}
+&nbsp;
+.component-subComponent {
+    // Sub-Component properties
+    &nbsp;
+    &amp;.component-subComponent--modifier {
+        // Sub-Component modifier properties
+    }
+}
+</code></pre></div>
+&nbsp;</p>
+
+</div>
+
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/selectize/dist/js/standalone/selectize.min.js"></script>
+<script src="/dist/js/main.js"></script>
+<script src="public/prettify.js"></script>
+<script src="public/main.js"></script>
+<script>
+	prettyPrint();
+</script>
+
+
+</body>
+</html>
