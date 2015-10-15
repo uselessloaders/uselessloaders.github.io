@@ -18,7 +18,7 @@
 		"src": "src/less",
 		"template": "src/styleguide",
 		"dist": "dist/styleguide",
-		"css": "/dist/css/main.css"
+		"css": "/assets/dist/css/main.css"
 	},
 	"rev": {
 		"src": [

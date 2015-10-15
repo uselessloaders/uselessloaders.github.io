@@ -3,7 +3,7 @@ var Toggle = function() {
 		targetAttr    : 'data-target',
 		classNameAttr : 'data-class',
 		eventAttr     : 'data-event'
-	}
+	};
 };
 
 Toggle.prototype = {
@@ -24,4 +24,4 @@ Toggle.prototype = {
 
 };
 
-module.exports = new Toggle;
+module.exports = new Toggle();

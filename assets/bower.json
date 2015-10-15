@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "normalize-less": "*",
-    "lesshat": "~3.0.2"
+    "lesshat": "~3.0.2",
+    "jquery": "~2.1.4"
   }
 }
