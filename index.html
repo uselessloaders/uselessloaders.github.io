@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="assets/dist/css/main.css">
+	<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script src="assets/dist/js/main.js"></script>
 	<title>Useless Loaders</title>
 </head>
@@ -23,41 +24,39 @@
 		<div class="stack stack--2">
 
 			<article class="loader center">
-				<h2>The Sausage</h2>
+				<h2 class="loader-heading">The Sausage</h2>
 				<div class="loader-inner">
-					<div class="sausage js-toggle" data-target=".sausage"></div>
+					<div class="sausage"></div>
 				</div>
 			</article>
 
-			<article class="code">
+			<article class="loader-code">
 				<code>
 					<ol>
 						<li>.sausage {</li>
-						<li>height: 20px;</li>
-						<li>width: 50px;</li>
-						<li>background: @swatchRed;</li>
-						<li>.border-radius(50px);</li>
-						<li>.box-shadow(inset 2px -2px 1px 1px darken(@swatchRed, 30%));</li>
-						<li>.animation(push 2s ease infinite);</li>
 						<li>}</li>
 					</ol>		
 				</code>
 				
 			</article>
 
-		</div> 
+		</div>
 
 		<div class="stack stack--2">
 
 			<article class="loader center">
-				<h2>Crossing Swords</h2>
+				<h2 class="loader-heading">Crossing Swords</h2>
 				<div class="loader-inner">
-					<div class="swordsCrossing1 js-toggle" data-target=".swordsCrossing"></div>
-					<div class="swordsCrossing2 js-toggle" data-target=".swordsCrossing"></div>
+
+					<div class="crossingSwords">
+						<div class="crossingSwords-swordLeft"></div>
+						<div class="crossingSwords-swordRight"></div>
+					</div>
+
 				</div>
 			</article>
 
-			<article class="code">
+			<article class="loader-code">
 				<code>
 					<ol>
 						<li>.crossingSwords {</li>
@@ -68,7 +67,87 @@
 				
 			</article>
 
-		</div> 
+		</div>
+
+		<div class="stack stack--2">
+
+			<article class="loader center">
+				<h2 class="loader-heading">Sine Wave</h2>
+				<div class="loader-inner">
+
+					<div class="sineWave">
+						<div class="sineWave-wave"></div>
+					</div>
+
+				</div>
+			</article>
+
+			<article class="loader-code">
+				<code>
+					<ol>
+						<li>.sineWave {</li>
+						
+						<li>}</li>
+					</ol>		
+				</code>
+				
+			</article>
+
+		</div>
+
+		<div class="stack stack--2">
+
+			<article class="loader center">
+				<h2 class="loader-heading">Radio</h2>
+				<div class="loader-inner">
+
+					<div class="radio">
+						<div class="radio-wave"></div>
+						<div class="radio-struction"></div>
+					</div>
+
+				</div>
+			</article>
+
+			<article class="loader-code">
+				<code>
+					<ol>
+						<li>.radio {</li>
+						
+						<li>}</li>
+					</ol>		
+				</code>
+				
+			</article>
+
+		</div>
+
+		<div class="stack stack--2">
+
+			<article class="loader center">
+				<h2 class="loader-heading">Hourglass</h2>
+				<div class="loader-inner">
+
+					<div class="hourGlass js-toggle" data-target=".hourGlass">
+						<div class="hourGlass-inner"></div>
+					</div>
+
+				</div>
+			</article>
+
+			<article class="loader-code">
+				<code>
+					<ol>
+						<li>.hourGlass {</li>
+						
+						<li>}</li>
+					</ol>		
+				</code>
+				
+			</article>
+
+		</div>
+
 	</section>
 
 	<footer id="footer" class="footer box box--xl">

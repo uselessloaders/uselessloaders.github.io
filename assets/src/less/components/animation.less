@@ -1,20 +1,6 @@
-.loader {
-	.size(100%, 200px);
-	padding: 5rem 8rem;
+.header-slug {
+	.animation(pulse 2s ease infinite);
 }
-
-.loader-inner {
-	position: relative;
-	margin-top: 3rem;
-
-	> * {
-		position: absolute;
-		left: 45%;
-
-		.translateX(-50%);
-	}
-}
-
 
 .sausage {
 	.size(55px, 20px);
@@ -50,9 +36,9 @@
 	}
 }
 
-.swordsCrossing1 {
+.crossingSwords-swordRight {
 	.size(20px, 80px);
-
+	position: absolute;
 
 	background: #ddd;
 
@@ -87,9 +73,9 @@
 	}
 }
 
-.swordsCrossing2 {
+.crossingSwords-swordLeft {
 	.size(20px, 80px);
-
+	position: absolute;
 
 	background: #ddd;
 
@@ -124,13 +110,185 @@
 	}
 }
 
-.header-slug {
-	.animation(pulse 2s ease infinite);
+
+.radio {
+	.size(2px, 100px);
+	background: #000;
+
+	border-radius: 5rem;
+	box-shadow:
+		-41px -40px 0 -30px @swatchYellow,
+		-41px -40px 0 -25px #000;
+	
+	&:before {
+		height: 10rem;
+		position: absolute;
+		top: -.4rem;
+		left: 2.2rem;
+
+		border-left: 2px solid #000;
+
+		content: '';
+
+		.rotate(-25deg);
+	}
+
+	&:after {
+		height: 10rem;
+		position: absolute;
+		top: -.4rem;
+		left: -2.2rem;
+
+		border-right: 2px solid #000;
+
+		content: '';
+
+		.rotate(25deg);
+	}
+
+	.radio-wave {
+		position: absolute;
+		top: -1.5rem;
+		left: -.7rem;
+		width: 1.5rem;
+		height: 1.5rem;
+
+		box-shadow: inset -5px -5px 0 2px #000;
+
+		border: 1px solid #000;
+		border-radius: 5rem;
+
+		&:before {
+			position: absolute;
+			top: -2rem;
+			left: -5.3rem;
+			width: 12rem;
+			height: 5rem;
+
+			border-left: 2px solid #000;
+			border-right: 2px solid #000;
+			border-radius: 5rem;
+
+			content: '';
+
+			.animation(shoot 1.5s ease infinite);
+		}
+
+		&:after {
+			position: absolute;
+			top: -1rem;
+			left: -2.3rem;
+			width: 6rem;
+			height: 3rem;
+
+			border-left: 2px solid #000;
+			border-right: 2px solid #000;
+			border-radius: 5rem;
+
+			content: '';
+
+			.animation(shoot 1.5s ease infinite);
+			.animation-delay(.5s);
+		}
+	}
+
+	.radio-struction {
+		position: absolute;
+		top: 3rem;
+		right: -2.7rem;
+		width: 3.2rem;
+		box-shadow: 
+			-10px 15px 0 .8px #000,
+			-5px 35px 0 .8px #000;
+		.rotate(-11deg);
+
+		&:before {
+			position: absolute;
+			top: .9rem;
+			left: -2.8rem;
+			width: 3rem;
+			border-bottom: 2.2rem solid #000;
+			border-left: .4rem solid transparent;
+			border-right: .5rem solid transparent;
+
+			content: '';
+
+			.rotate(24deg);
+		}
+
+		&:after {
+			position: absolute;
+			top: 1rem;
+			left: -2.9rem;
+			width: 3rem;
+			border-bottom: 1.9rem solid @swatchYellow;
+			border-left: .4rem solid transparent;
+			border-right: .4rem solid transparent;
+
+			content: '';
+
+			.rotate(24deg);
+		}
+	}
+}
+
+.hourGlass {
+
+	.hourGlass-inner {
+		position: absolute;
+		top: -3rem;
+		left: -5rem;
+
+		border-top: 3rem solid transparent;
+		border-left: 5rem solid #000;
+		border-bottom: 3rem solid transparent;
+
+		.is-active& {
+			top: -3rem;
+			left: -3.7rem;
+
+			border-radius: 1rem;
+
+			.scale(.5);
+			.transition(all .5s ease);
+		}
+
+		&:before {
+			position: absolute;
+			top: -3rem;
+			left: -5rem;
+
+			border-top: 3rem solid transparent;
+			border-left: 5rem solid #000;
+			border-bottom: 3rem solid transparent;
+
+			content: '';
+
+			.transition(all .5s ease);
+
+			.is-active& {
+				left: -.5rem;
+
+				border-radius: 1rem;
+
+				.scale(.5);
+				.scaleX(-1);
+				.transition-delay(.9s);
+			}
+		}
+	}
+
+	&.is-active {
+		.animation(spin 1.5s ease infinite);
+		.transition(all .5s ease);
+	}
 }
 
 
-// misc
+// keyframes
+.keyframes(~'spinScale, 0%, 100% {transform: scale(1);} 100% {transform: scale(-1); animation: spin 1s infinite ease}');
+.keyframes(~'shoot, 0%, 100% {transform: scale(0);} 100% {transform: scale(1); }');
 .keyframes(~'pulse, 0%, 100% {transform: scale(.9);} 50% {transform: scale(1); }');
-.keyframes(~'spin, 0%, {transform: rotate(0deg);} 50% {transform: rotate(360deg); }');
+.keyframes(~'spin, 0%, 40% {transform: rotate(90deg);} 100% {transform: rotate(450deg); }');
 .keyframes(~'push, 0%, {transform: margin-left: -30px;} 50% {margin-left: 40px; }');
 .keyframes(~'pushinvert, 0%, {transform: margin-left: 30px;} 50% {margin-left: -40px; }');

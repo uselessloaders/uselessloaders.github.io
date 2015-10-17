@@ -1,7 +1,7 @@
 .header {
 	.size(100%, 600px);
 
-	background: @swatchGray;
+	background: #082930;
 
 	.box-shadow(0 8px 4px -5px #323);
 }
@@ -10,10 +10,32 @@
 	padding: 4rem;
 }
 
+.loader {
+	.size(100%, 200px);
+	padding: 5rem 8rem;
+}
+
+
+.loader-heading {
+	margin-bottom: 5rem;
+}
+
+.loader-inner {
+	position: relative;
+	margin-top: 3rem;
+
+	> * {
+		position: absolute;
+		left: 50%;
+
+		.translateX(-50%);
+	}
+}
+
 .footer {
 	.size(100%, 300px);
 
-	background: @swatchPurple;
+	background: #082930;
 
 	.box-shadow(0 -9px 6px -5px #510);
 }
