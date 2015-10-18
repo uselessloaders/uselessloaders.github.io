@@ -1141,6 +1141,7 @@ Styleguide components.bubble
   overflow: hidden;
   width: 100px;
   height: 50px;
+  border-radius: 5rem;
 }
 .sineWave .sineWave-wave {
   position: absolute;
